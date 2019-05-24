@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './lib/Element.js',
+  entry: './lib/element.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/',
@@ -10,7 +10,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, './view/testElement.html'),
+      template: path.resolve(__dirname, './view/template.html'),
       filename: './index.html',
       title: 'V-Dom',
       inject: false
