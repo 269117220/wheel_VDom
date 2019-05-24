@@ -1,0 +1,15 @@
+<html>
+<head>
+<title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <% for (var js in htmlWebpackPlugin.files.js) { %>
+    <script type="text/javascript" src="<%=htmlWebpackPlugin.files.js[js] %>"></script>
+    <% } %>
+    <script>
+    console.log('使用htmlWebpackPlugin时，inject:false,手动注入...方便插入额外代码');
+    </script>
+</body>
+</html>
